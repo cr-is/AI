@@ -3,7 +3,7 @@ import tiktoken
 import os
 from rich import print
 
-def num_tokens_from_messages(messages, model='gpt-3.5'):
+def num_tokens_from_messages(messages, model='gpt-3.5-turbo-0125'):
   """Returns the number of tokens used by a list of messages.
   Copied with minor changes from: https://platform.openai.com/docs/guides/chat/managing-tokens """
   try:
@@ -48,7 +48,7 @@ class OpenAiManager:
 
         print("[yellow]\nAsking ChatGPT a question...")
         completion = self.client.chat.completions.create(
-          model="gpt-4",
+          model="p",
           messages=chat_question
         )
 
@@ -74,7 +74,7 @@ class OpenAiManager:
 
         print("[yellow]\nAsking ChatGPT a question...")
         completion = self.client.chat.completions.create(
-          model="gpt-4",
+          model="gpt-3.5-turbo-0125",
           messages=self.chat_history
         )
 
@@ -87,19 +87,19 @@ class OpenAiManager:
         return openai_answer
    
 
-if __name__ == '__main__':
-    openai_manager = OpenAiManager()
-
-    # CHAT TEST
-    chat_without_history = openai_manager.chat("Hey ChatGPT what is 2 + 2? But tell it to me as Yoda")
+#if __name__ == '__main__':
+#    openai_manager = OpenAiManager()
+#
+#    # CHAT TEST
+#    chat_without_history = openai_manager.chat("Hey ChatGPT what is 2 + 2? But tell it to me as Yoda")
 
     # CHAT WITH HISTORY TEST
-    FIRST_SYSTEM_MESSAGE = {"role": "system", "content": "Act like you are Captain Jack Sparrow from the Pirates of Carribean movie series!"}
-    FIRST_USER_MESSAGE = {"role": "user", "content": "Ahoy there! Who are you, and what are you doing in these parts? Please give me a 1 sentence background on how you got here. And do you have any mayonnaise I can borrow?"}
-    openai_manager.chat_history.append(FIRST_SYSTEM_MESSAGE)
-    openai_manager.chat_history.append(FIRST_USER_MESSAGE)
-
-    while True:
-        new_prompt = input("\nNext question? \n\n")
-        openai_manager.chat_with_history(new_prompt)
+#    FIRST_SYSTEM_MESSAGE = {"role": "system", "content": "Act like you are Captain Jack Sparrow from the Pirates of Carribean movie series!"}
+#    FIRST_USER_MESSAGE = {"role": "user", "content": "Ahoy there! Who are you, and what are you doing in these parts? Please give me a 1 sentence background on how you got here. And do you have any mayonnaise I can borrow?"}
+#    openai_manager.chat_history.append(FIRST_SYSTEM_MESSAGE)
+#    openai_manager.chat_history.append(FIRST_USER_MESSAGE)
+#
+#    while True:
+#        new_prompt = input("\nNext question? \n\n")
+#        openai_manager.chat_with_history(new_prompt)
         

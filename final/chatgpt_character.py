@@ -37,7 +37,7 @@ while True:
         print("[red]Did not receive any input from your microphone!")
         continue
 
-    # Send question to OpenAi
+    # Send question to OpenAppi
     openai_result = openai_manager.chat_with_history(mic_result)
     
     # Write the results to txt file as a backup
