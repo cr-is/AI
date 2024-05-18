@@ -1,0 +1,31 @@
+@startwbs wbs
++ Laboratorio Scolastico
+ + Analisi dei PC e delle postazioni
+  + Identificazione dei requisiti hardware dei PC
+  + Verifica dello stato delle postazioni di lavoro
+ + Reperimento del Sistema Operativo (SO)
+  + Ricerca e valutazione dei sistemi operativi compatibili
+  + Acquisto o licenza del sistema operativo selezionato
+ + Lista e reperimento dei programmi da installare
+  + Identificazione dei software necessari per il laboratorio
+  + Ricerca e acquisizione delle licenze per i programmi
+ + Definizione dei nomi dei PC in rete
+  + Designazione dei nomi univoci per ciascun PC
+  + Configurazione dei nomi dei PC all'interno della rete locale
+ + Installazione del SO e dei programmi su PC di prova
+  + Preparazione dei PC di prova per l'installazione
+  + Installazione del sistema operativo sui PC di prova
+  + Installazione dei programmi base sui PC di prova
+ + Preparazione dell'immagine del PC di prova
+  + Configurazione dei software e delle impostazioni desiderate
+  + Creazione dell'immagine del disco rigido del PC di prova
+ + Duplicazione dell'immagine sui vari PC
+  + Distribuzione dell'immagine del disco rigido ai PC destinatari
+  + Verifica dell'integrità dell'immagine su ciascun PC
+ + Inserimento dei PC in rete con il proprio nome
+  + Connessione dei PC alla rete locale
+  + Assegnazione dei nomi dei PC alla rete
+ + Avvio del SO e dei programmi su ogni PC
+  + Verifica dell'avvio corretto del sistema operativo
+  + Test dei programmi installati su ciascun PC
+@endwbs

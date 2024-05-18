@@ -3,7 +3,7 @@ import tiktoken
 import os
 from rich import print
 
-def num_tokens_from_messages(messages, model='gpt-4'):
+def num_tokens_from_messages(messages, model='gpt-3.5'):
   """Returns the number of tokens used by a list of messages.
   Copied with minor changes from: https://platform.openai.com/docs/guides/chat/managing-tokens """
   try:
@@ -26,8 +26,11 @@ class OpenAiManager:
     
     def __init__(self):
         self.chat_history = [] # Stores the entire conversation
+        api_key = 'sk-proj-b4wOYQ0bTFKTwe1ueWHFT3BlbkFJSKcBXdJa55JqKXdxEV7Q'  # Inserisci qui la tua chiave di API
+        
+
         try:
-            self.client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+            self.client = OpenAI(api_key=api_key)
         except TypeError:
             exit("Ooops! You forgot to set OPENAI_API_KEY in your environment!")
 
