@@ -26,7 +26,7 @@ class OpenAiManager:
     
     def __init__(self):
         self.chat_history = [] # Stores the entire conversation
-        api_key = 'sk-proj-b4wOYQ0bTFKTwe1ueWHFT3BlbkFJSKcBXdJa55JqKXdxEV7Q'  # Inserisci qui la tua chiave di API
+        api_key = 'sk-proj-t6MC0VI3DYIAQytY5W0cT3BlbkFJIy9TU2l9AnZaV8asv8Qr'  # Inserisci qui la tua chiave di API
         
 
         try:

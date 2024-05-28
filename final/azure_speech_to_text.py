@@ -96,7 +96,7 @@ class SpeechToTextManager:
         print(f"\n\nHere's the result we got from continuous file read!\n\n{final_result}\n\n")
         return final_result
 
-    def speechtotext_from_mic_continuous(self, p='p'):
+    def speechtotext_from_mic_continuous(self, stop_key='p'):
         self.azure_speechrecognizer = speechsdk.SpeechRecognizer(speech_config=self.azure_speechconfig)
 
         done = False
